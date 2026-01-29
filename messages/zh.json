@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我",
+    "projects": "项目",
+    "contact": "联系我"
+  },
+  "home": {
+    "greeting": "你好，我是",
+    "name": "你的名字",
+    "title": "全栈开发者与设计师",
+    "subtitle": "用代码和创意打造数字体验",
+    "cta": "查看作品",
+    "aboutPreview": "我是一位热衷于构建美观且功能强大的网络应用的开发者。"
+  },
+  "about": {
+    "title": "关于我",
+    "intro": "我是一名全栈开发者，热衷于为复杂问题创造优雅的解决方案。",
+    "skills": "技能与技术",
+    "experience": "工作经验",
+    "education": "教育背景"
+  },
+  "projects": {
+    "title": "精选项目",
+    "viewProject": "查看项目",
+    "github": "在GitHub上查看"
+  },
+  "contact": {
+    "title": "联系我",
+    "subtitle": "有项目想法吗？让我们一起合作。",
+    "name": "姓名",
+    "email": "邮箱",
+    "message": "留言",
+    "send": "发送消息",
+    "sending": "发送中...",
+    "success": "消息发送成功！",
+    "error": "消息发送失败。请重试。"
+  },
+  "footer": {
+    "rights": "版权所有。",
+    "built": "使用 Next.js 与 TypeScript 构建"
+  }
+}

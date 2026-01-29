@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Your Name",
+    "title": "Full Stack Developer & Designer",
+    "subtitle": "Crafting digital experiences with code and creativity",
+    "cta": "View My Work",
+    "aboutPreview": "I'm a passionate developer who loves building beautiful and functional web applications."
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "I'm a full stack developer with a passion for creating elegant solutions to complex problems.",
+    "skills": "Skills & Technologies",
+    "experience": "Experience",
+    "education": "Education"
+  },
+  "projects": {
+    "title": "Selected Projects",
+    "viewProject": "View Project",
+    "github": "View on GitHub"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind? Let's work together.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with Next.js & TypeScript"
+  }
+}
