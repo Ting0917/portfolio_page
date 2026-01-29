@@ -5,6 +5,8 @@ import {routing} from '@/lib/routing';
 import '../globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { Analytics } from '@vercel/analytics/react';
+
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -37,6 +39,10 @@ export default async function LocaleLayout({
           </main>
           <Footer />
         </NextIntlClientProvider>
+      </body>
+      <body>
+        {children}
+        <Analytics />
       </body>
     </html>
   );
