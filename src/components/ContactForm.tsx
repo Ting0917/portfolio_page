@@ -67,7 +67,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           className="w-full px-4 py-3 border-2 border-navy/10 rounded-lg focus:border-accent focus:outline-none transition-colors bg-white"
-          placeholder="John Doe"
+          placeholder="チェン たろう"
         />
       </div>
 
@@ -84,7 +84,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           className="w-full px-4 py-3 border-2 border-navy/10 rounded-lg focus:border-accent focus:outline-none transition-colors bg-white"
-          placeholder="john@example.com"
+          placeholder="taro@example.com"
         />
       </div>
 
@@ -101,7 +101,7 @@ export default function ContactForm() {
           required
           rows={6}
           className="w-full px-4 py-3 border-2 border-navy/10 rounded-lg focus:border-accent focus:outline-none transition-colors resize-none bg-white"
-          placeholder="Tell me about your project..."
+          placeholder="message..."
         />
       </div>
 

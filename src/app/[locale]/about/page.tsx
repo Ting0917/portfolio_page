@@ -27,9 +27,7 @@ export default function AboutPage() {
               {t('intro')}
             </p>
             <p className="text-lg text-gray-custom leading-relaxed">
-              I specialize in building modern web applications with clean code and beautiful design. 
-              My approach combines technical expertise with creative problem-solving to deliver 
-              exceptional user experiences.
+              I focus on web development and data science, designing and implementing practical solutions by first understanding requirements and the underlying problems.
             </p>
           </div>
 
@@ -82,23 +80,11 @@ export default function AboutPage() {
           <div className="space-y-12">
             {[
               {
-                title: 'Senior Full Stack Developer',
-                company: 'Tech Company Inc.',
-                period: '2022 - Present',
-                description: 'Leading development of enterprise web applications',
-              },
-              {
-                title: 'Full Stack Developer',
-                company: 'Startup Co.',
-                period: '2020 - 2022',
-                description: 'Built and maintained multiple client projects',
-              },
-              {
-                title: 'Frontend Developer',
-                company: 'Digital Agency',
-                period: '2018 - 2020',
-                description: 'Created responsive websites and web applications',
-              },
+                title: 'Frontend Engineer Intern',
+                company: 'Jelper Club Co.',
+                period: '2023/2 - 2023/8',
+                description: 'イベントページ、管理画面の設計・実装、幅広く機能改善。TypeScript、React、CSSを使用し、レスポンシブでユーザーフレンドリーなUIを構築。',
+              }
             ].map((job, index) => (
               <div
                 key={index}
@@ -121,15 +107,40 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-12">
             {t('education')}
           </h2>
-          <div className="bg-navy/5 rounded-2xl p-8">
-            <h3 className="text-2xl font-display font-bold mb-2">
-              Bachelor of Computer Science
+          <div className="bg-navy/5 rounded-2xl p-8 mb-8">
+            <h3 className="text-2xl font-display font-bold mb-2;">
+            普通科高校
             </h3>
-            <p className="text-accent font-medium mb-2">University Name</p>
-            <p className="text-gray-custom">2014 - 2018</p>
+            <p className="text-accent font-medium mb-2">(台湾)Kang Chiao国際高等学校 </p>
+            <p className="text-gray-custom">2017 - 2020</p>
+          </div>
+          <div className="bg-navy/5 rounded-2xl p-8 mb-8">
+            <h3 className="text-2xl font-display font-bold mb-2">
+            数学とビジネス管理学科 Foundation Program
+            </h3>
+            <p className="text-accent font-medium mb-2">(イギリス)King’s College London 大学</p>
+            <p className="text-gray-custom">2020 - 2021</p>
+          </div>
+          <div className="bg-navy/5 rounded-2xl p-8 mb-8">
+            <h3 className="text-2xl font-display font-bold mb-2">
+            コンピューターサイエンス（人工知能）と管理学科 Bachelor's Degree
+            </h3>
+            <p className="text-accent font-medium mb-2">(イギリス)King’s College London 大学</p>
+            <p className="text-gray-custom">2021 - 2024</p>
+          </div>
+                    <div className="bg-navy/5 rounded-2xl p-8 mb-8">
+            <h3 className="text-2xl font-display font-bold mb-2">
+            データサイエンス研究科
+            </h3>
+            <p className="text-accent font-medium mb-2">シドニー大学院</p>
+            <p className="text-gray-custom">2025 - 現在</p>
           </div>
         </div>
+
+
       </div>
     </div>
+
+  
   );
 }

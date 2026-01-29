@@ -62,9 +62,7 @@ export default function HomePage() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
           {[
-            { number: '5+', label: 'Years Experience' },
-            { number: '50+', label: 'Projects Completed' },
-            { number: '30+', label: 'Happy Clients' },
+            { number: '20+', label: 'Projects Completed' },
           ].map((stat, index) => (
             <div
               key={index}
