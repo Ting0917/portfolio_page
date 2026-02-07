@@ -1,11 +1,21 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { useTranslations } from 'next-intl';
 import emailjs from '@emailjs/browser';
 
-export default function ContactForm() {
-  const t = useTranslations('contact');
+interface ContactFormProps {
+  translations: {
+    name: string;
+    email: string;
+    message: string;
+    send: string;
+    sending: string;
+    success: string;
+    error: string;
+  };
+}
+
+export default function ContactForm({ translations: t }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,29 +28,23 @@ export default function ContactForm() {
     setStatus('sending');
 
     try {
-      // Replace these with your EmailJS credentials
-      // Get them from: https://www.emailjs.com/
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your service ID
-        'YOUR_TEMPLATE_ID', // Replace with your template ID
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        'YOUR_PUBLIC_KEY' // Replace with your public key
+        'YOUR_PUBLIC_KEY'
       );
 
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
-      
-      // Reset success message after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       console.error('Failed to send email:', error);
       setStatus('error');
-      
-      // Reset error message after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
     }
   };
@@ -54,10 +58,9 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Name Field */}
       <div>
         <label htmlFor="name" className="block text-navy font-medium mb-2">
-          {t('name')}
+          {t.name}
         </label>
         <input
           type="text"
@@ -71,10 +74,9 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Email Field */}
       <div>
         <label htmlFor="email" className="block text-navy font-medium mb-2">
-          {t('email')}
+          {t.email}
         </label>
         <input
           type="email"
@@ -88,10 +90,9 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Message Field */}
       <div>
         <label htmlFor="message" className="block text-navy font-medium mb-2">
-          {t('message')}
+          {t.message}
         </label>
         <textarea
           id="message"
@@ -105,25 +106,23 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Submit Button */}
       <button
         type="submit"
         disabled={status === 'sending'}
         className="w-full bg-navy text-cream px-8 py-4 rounded-lg hover:bg-accent transition-all duration-300 font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 transform"
       >
-        {status === 'sending' ? t('sending') : t('send')}
+        {status === 'sending' ? t.sending : t.send}
       </button>
 
-      {/* Status Messages */}
       {status === 'success' && (
         <div className="p-4 bg-green-50 border-2 border-green-200 rounded-lg text-green-800 text-center animate-fade-in">
-          {t('success')}
+          {t.success}
         </div>
       )}
 
       {status === 'error' && (
         <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg text-red-800 text-center animate-fade-in">
-          {t('error')}
+          {t.error}
         </div>
       )}
     </form>

@@ -21,7 +21,16 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="animate-fade-in">
-            <ContactForm />
+            <ContactForm 
+            translations={{
+            name: t('name'),
+            email: t('email'),
+            message: t('message'),
+            send: t('send'),
+            sending: t('sending'),
+            success: t('success'),
+            error: t('error'),
+  }}/>
           </div>
 
           {/* Contact Information */}

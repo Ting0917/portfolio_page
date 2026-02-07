@@ -4,16 +4,20 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/lib/routing';
 import { useState } from 'react';
 
+
+type Locale = "en" | "ja" | "zh";
+
 export default function Navigation() {
   const t = useTranslations('nav');
+  
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const changeLanguage = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale });
-  };
+  const changeLanguage = (newLocale: Locale) => {
+  router.replace(pathname, { locale: newLocale });
+  setIsMenuOpen(false);};
 
   const navItems = [
     { key: 'home', href: '/' },
@@ -22,7 +26,7 @@ export default function Navigation() {
     { key: 'contact', href: '/contact' },
   ];
 
-  const languages = [
+  const languages: { code: Locale; label: string }[] = [
     { code: 'en', label: 'EN' },
     { code: 'ja', label: '日本語' },
     { code: 'zh', label: '中文' },

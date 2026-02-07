@@ -40,10 +40,6 @@ export default async function LocaleLayout({
           <Footer />
         </NextIntlClientProvider>
       </body>
-      <body>
-        {children}
-        <Analytics />
-      </body>
     </html>
   );
 }
